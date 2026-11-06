@@ -1,0 +1,37 @@
+{
+  "name": "mcp-multi-platform-social-posts-comments",
+  "displayName": "Multi Platform Social Posts and Comments",
+  "version": "1.0.0",
+  "description": "MCP server for Multi Platform Social Posts and Comments. Public posts and comments from 6 platforms in one row layout. Runs on Apify. Clay-ready output.",
+  "author": {
+    "name": "Mamba Labs",
+    "email": "labs@mambamindsetgrowth.com"
+  },
+  "homepage": "https://mambabuilt.com",
+  "repository": "https://github.com/mambalabsdev/mcp-multi-platform-social-posts-comments",
+  "license": "MIT",
+  "category": "productivity",
+  "tags": [
+    "social media",
+    "comments",
+    "reddit",
+    "bluesky",
+    "youtube",
+    "hacker news",
+    "mastodon",
+    "lemmy"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "social media",
+    "comments",
+    "reddit",
+    "bluesky",
+    "youtube",
+    "hacker news",
+    "mastodon",
+    "lemmy"
+  ],
+  "mcpServers": ".mcp.json"
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@mambalabsdev/mcp-multi-platform-social-posts-comments",
+  "version": "1.0.0",
+  "description": "MCP server for Multi Platform Social Posts and Comments. Public posts and comments from 6 platforms in one row layout. Runs on Apify. Clay-ready output.",
+  "type": "module",
+  "bin": {
+    "mcp-multi-platform-social-posts-comments": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "social media",
+    "comments",
+    "reddit",
+    "bluesky",
+    "youtube",
+    "hacker news",
+    "mastodon",
+    "lemmy",
+    "apify",
+    "clay"
+  ],
+  "author": "Mamba Labs <labs@mambamindsetgrowth.com>",
+  "license": "MIT",
+  "homepage": "https://apify.com/mambalabs/multi-platform-social-posts-comments",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-multi-platform-social-posts-comments"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "5.9.3"
+  },
+  "mcpName": "com.mambabuilt/mcp-multi-platform-social-posts-comments"
+}

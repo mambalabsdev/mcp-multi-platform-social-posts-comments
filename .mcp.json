@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mamba-multi-platform-social-posts-comments": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mambalabsdev/mcp-multi-platform-social-posts-comments"
+      ],
+      "env": {
+        "APIFY_TOKEN": "your-apify-token"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@mambalabsdev/mcp-multi-platform-social-posts-comments",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Multi Platform Social Posts and Comments. Public posts and comments from 6 platforms in one row layout. Runs on Apify. Clay-ready output.",
   "type": "module",
   "bin": {

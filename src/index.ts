@@ -211,7 +211,7 @@ server.registerTool(
   {
     title: "Get public social posts and comments",
     description:
-      "Search public posts and comments on Bluesky, Hacker News, Mastodon, Lemmy, Reddit, and YouTube, or read the comments on given post addresses. Returns one row layout across platforms. No login. Instagram, X, Facebook, TikTok, and LinkedIn are not covered. Pay per event on Apify.",
+      "Search public posts and comments on Bluesky, Hacker News, Mastodon, Lemmy, Reddit, and YouTube, or read the comments on given post addresses. Returns one row layout across platforms. No login. Reddit search needs subreddits in reddit_subreddits (Arctic Shift archive) or the caller's own Serper or Brave key in search_api_key. Instagram, X, Facebook, TikTok, and LinkedIn are not covered. Pay per event on Apify.",
     annotations: {
       title: "Get public social posts and comments",
       readOnlyHint: true,
@@ -229,6 +229,10 @@ server.registerTool(
       since_date: z.string().optional().describe("Only posts from this date, such as 2026-10-01. YouTube gives relative dates only, so YouTube rows are not filtered."),
       mastodon_instance: z.string().optional().describe("Host name to read hashtags from. Default mastodon.social."),
       lemmy_instance: z.string().optional().describe("Host name to search. Default lemmy.world."),
+      reddit_subreddits: z.array(z.string()).optional().describe("Subreddits to search for each query on Reddit, such as sales or r/sales, up to 10. Without your own search key, Reddit is searched through the Arctic Shift archive, which needs a subreddit. Leave empty to search all of Reddit with search_api_key."),
+      reddit_route: z.enum(["arctic_shift", "search_key", "both"]).optional().describe("arctic_shift (default): the Arctic Shift archive, free, needs reddit_subreddits. search_key: the caller's own Serper or Brave key, searches all of Reddit. both: both, deduped. When the chosen route fails or cannot run, the actor uses the other one if it can and says so in route_note."),
+      search_provider: z.enum(["serper", "brave"]).optional().describe("Provider of search_api_key. Default serper."),
+      search_api_key: z.string().optional().describe("Optional. The caller's own Serper or Brave Search key, used only to find Reddit posts across all of Reddit. Sent only to that provider; never logged or written to a row."),
       max_charge_usd: z.string().optional().describe("Optional. The run stops before a charge that would pass this amount. Summary rows are always returned."),
     },
   },

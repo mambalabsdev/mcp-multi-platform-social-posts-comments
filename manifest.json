@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "mcp-multi-platform-social-posts-comments",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "MCP server for Multi Platform Social Posts and Comments. Public posts and comments from 6 platforms in one row layout. Runs on Apify. Clay-ready output.",
   "author": {
     "name": "Mamba Labs"
